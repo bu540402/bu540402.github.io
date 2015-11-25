@@ -4,21 +4,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Learning4Fun</title>
+  <title>ural 1106 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="/*题意：把一个图中的点分为两组，保证每个组的任意节点在另外一组一定有一个与之相邻的节点。
+ * 解法：bfs一遍黑白染色。图可能不联通。只有一个节点的则不能成功分组。
+ */
+#include &amp;lt;functional&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;iomanip&amp;gt;
+#incl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/11/24/hello-world/index.html">
+<meta property="og:title" content="ural 1106">
+<meta property="og:url" content="http://yoursite.com/2013/09/04/ural-1106/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-11-23T05:50:20.088Z">
+<meta property="og:description" content="/*题意：把一个图中的点分为两组，保证每个组的任意节点在另外一组一定有一个与之相邻的节点。
+ * 解法：bfs一遍黑白染色。图可能不联通。只有一个节点的则不能成功分组。
+ */
+#include &amp;lt;functional&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;iomanip&amp;gt;
+#incl">
+<meta property="og:updated_time" content="2015-11-25T04:54:58.783Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="ural 1106">
+<meta name="twitter:description" content="/*题意：把一个图中的点分为两组，保证每个组的任意节点在另外一组一定有一个与之相邻的节点。
+ * 解法：bfs一遍黑白染色。图可能不联通。只有一个节点的则不能成功分组。
+ */
+#include &amp;lt;functional&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;iomanip&amp;gt;
+#incl">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -71,10 +89,10 @@ Quick">
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-ural-1106" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/24/hello-world/" class="article-date">
-  <time datetime="2015-11-24T03:10:45.073Z" itemprop="datePublished">2015-11-24</time>
+    <a href="/2013/09/04/ural-1106/" class="article-date">
+  <time datetime="2013-09-04T01:50:24.000Z" itemprop="datePublished">2013-09-04</time>
 </a>
     
   </div>
@@ -85,7 +103,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      ural 1106
     </h1>
   
 
@@ -93,25 +111,116 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <pre config="brush:cpp;toolbar:false;">/*题意：把一个图中的点分为两组，保证每个组的任意节点在另外一组一定有一个与之相邻的节点。
+ * 解法：bfs一遍黑白染色。图可能不联通。只有一个节点的则不能成功分组。
+ */
+#include &lt;functional&gt;
+#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;numeric&gt;
+#include &lt;cstring&gt;
+#include &lt;cassert&gt;
+#include &lt;cstdio&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;bitset&gt;
+#include &lt;queue&gt;
+#include &lt;stack&gt;
+#include &lt;math.h&gt;
+#include &lt;ctime&gt;
+#include &lt;list&gt;
+#include &lt;set&gt;
+#include &lt;map&gt;
+#include&lt;time.h&gt;
+using namespace std;
+#define LL long long
+#define vN 105
+int adj[vN][vN];
+int used[vN],n;
+int color[vN];
+int bfs(int x)
+{
+    int cnt=0;
+    queue&lt;int&gt; q;
+    q.push(x);
+    used[x]=1;
+    color[x]=0;
+    while(!q.empty())
+    {
+        int u=q.front()
+                ;
+        q.pop();
+        cnt++;
+        for(int i=1;i&lt;=n;i++)
+        {
+            if(!used[i]&amp;&amp;adj[u][i])
+            {
+                q.push(i);
+                color[i]=1-color[u];
+                used[i]=1;
+            }
+        }
+    }
+    return cnt;
+}
 
+int main()
+{
+    //freopen("data.in","r",stdin);
+    memset(used,0,sizeof(used));
+    memset(adj,0,sizeof(adj));
+    cin&gt;&gt;n;
+    for(int i=1;i&lt;=n;i++)
+    {
+        int x;
+        while(cin&gt;&gt;x&amp;&amp;x)
+        {
+            adj[i][x]=1;
+            adj[x][i]=1;
+        }
+    }
+    int ans=-1;
+    for(int i=1;i&lt;=n;i++)
+    {
+        if(!used[i])
+        {
+            int flag=bfs(i);
+            if(flag==1)
+            {
+                ans=0;
+            }
+        }
+    }
+    if(ans==0)cout&lt;&lt;ans&lt;&lt;endl;
+    else
+    {
+        int cnt=0;
+        for(int i=1;i&lt;=n;i++)
+        {
+            if(color[i])cnt++;
+        }
+        cout&lt;&lt;cnt&lt;&lt;endl;
+        for(int i=1;i&lt;=n;i++)
+        {
+            if(color[i])
+            {
+                cout&lt;&lt;i&lt;&lt;" ";
+            }
+        }
+        cout&lt;&lt;endl;
+    }
+
+}</pre>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihel23jc000bdcwyp1tx8xlu" class="article-share-link" data-share="baidu" data-title="Hello World">分享到</a>
+        <a data-url="http://yoursite.com/2013/09/04/ural-1106/" data-id="cihel23j60008dcwy1nd3rc1p" class="article-share-link" data-share="baidu" data-title="ural 1106">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2015/11/24/hello-world/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2013/09/04/ural-1106/#ds-thread" class="article-comment-link">評論</a>
       
 
       
@@ -121,11 +230,15 @@ Quick">
     
 <nav id="article-nav">
   
-  
-    <a href="/2014/06/11/二分搜索总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">二分搜索总结</div>
+    <a href="/2013/09/04/ural-1040/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          ural 1040
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -134,7 +247,7 @@ Quick">
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2015/11/24/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2015/11/24/hello-world/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2013/09/04/ural-1106/" data-title="ural 1106" data-url="http://yoursite.com/2013/09/04/ural-1106/"></div>
   </section>
 </section>
       

@@ -4,21 +4,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Learning4Fun</title>
+  <title>二分搜索总结 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="若 p(x)成立，对于所有的y&amp;gt;x, p(y)都成立。当然，若p(x) 不成立，所有y &amp;lt; x, p(y)都不成立。
+使得p（x）成立的第一个满足条件的位置
+int binary_search(int a[], int low, int high)
+{
+    int mid;
+    while (low &amp;lt; high)
+    {
+        mid = low + (h">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/11/24/hello-world/index.html">
+<meta property="og:title" content="二分搜索总结">
+<meta property="og:url" content="http://yoursite.com/2014/06/11/二分搜索总结/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-11-23T05:50:20.088Z">
+<meta property="og:description" content="若 p(x)成立，对于所有的y&amp;gt;x, p(y)都成立。当然，若p(x) 不成立，所有y &amp;lt; x, p(y)都不成立。
+使得p（x）成立的第一个满足条件的位置
+int binary_search(int a[], int low, int high)
+{
+    int mid;
+    while (low &amp;lt; high)
+    {
+        mid = low + (h">
+<meta property="og:updated_time" content="2015-11-25T04:37:58.648Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="二分搜索总结">
+<meta name="twitter:description" content="若 p(x)成立，对于所有的y&amp;gt;x, p(y)都成立。当然，若p(x) 不成立，所有y &amp;lt; x, p(y)都不成立。
+使得p（x）成立的第一个满足条件的位置
+int binary_search(int a[], int low, int high)
+{
+    int mid;
+    while (low &amp;lt; high)
+    {
+        mid = low + (h">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -71,10 +89,10 @@ Quick">
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-二分搜索总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/24/hello-world/" class="article-date">
-  <time datetime="2015-11-24T03:10:45.073Z" itemprop="datePublished">2015-11-24</time>
+    <a href="/2014/06/11/二分搜索总结/" class="article-date">
+  <time datetime="2014-06-11T08:38:51.000Z" itemprop="datePublished">2014-06-11</time>
 </a>
     
   </div>
@@ -85,7 +103,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      二分搜索总结
     </h1>
   
 
@@ -93,25 +111,136 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p><strong>若 p(x)成立，对于所有的y&gt;x, p(y)都成立。当然，若p(x) 不成立，所有y &lt; x, p(y)都不成立。</strong></p>
+<h5 id="使得p（x）成立的第一个满足条件的位置">使得p（x）成立的第一个满足条件的位置</h5><pre config="brush:cpp;toolbar:false;">
+int binary_search(int a[], int low, int high)
+{
+    int mid;
+    while (low &lt; high)
+    {
+        mid = low + (high - low) / 2;
+        if (p(mid))
+            high = mid;
+        else
+            low = mid + 1;
+        if (p(low) == false)
+            return -1;
+        return low;
+    }
+}
+</pre>
 
+<h5 id="使得p(x)成立的最后一个满足条件的位置">使得p(x)成立的最后一个满足条件的位置</h5><pre config="brush:cpp;toolbar:false;">
+int binary_search(int a[], int low, int high)
+{
+    int mid;
+    while (low &lt; high)
+    {
+        mid = (high + low+1) / 2;
+        if (p(mid))
+            low = mid;
+        else
+            hight= mid - 1;
+        if (p(low) == false)
+            return -1;
+        return low;
+    }
+}
+</pre>
+
+<h5 id="第一个大于等于V">第一个大于等于V</h5><pre config="brush:cpp;toolbar:false;">
+int bs(int a[], int l, int h, int v)
+{
+    int m;
+    while (l &lt; h)
+    {
+        m = (l + h) &gt;&gt; 1;
+        if (a[m]&gt;= v)
+            h = m;
+        else
+            l = m + 1;
+    }
+    if(a[l]&lt;v)return -1;
+    return l;
+}
+</pre>
+
+<h5 id="等于V的第一个">等于V的第一个</h5><pre config="brush:cpp;toolbar:false;">
+int bs(int a[], int l, int h, int v)
+{
+    int m;
+    while (l &lt; h)
+    {
+        m = (l + h) &gt;&gt; 1;
+        if (a[m]&gt;= v)
+            h = m;
+        else
+            l = m + 1;
+    }
+    if(a[l]!=v)return -1;
+    return l;
+}
+</pre>
+
+<h5 id="大于V的第一个">大于V的第一个</h5><pre config="brush:cpp;toolbar:false;">
+int bs(int a[], int l, int h, int v)
+{
+    int m;
+    while (l &lt; h)
+    {
+        m = (l + h) &gt;&gt; 1;
+        if (a[m]&gt; v)
+            h = m;
+        else
+            l = m + 1;
+    }
+    if(a[l]&lt;=v)return -1;
+    return l;
+}
+</pre>
+
+<h5 id="小于等于的最后一个">小于等于的最后一个</h5><pre config="brush:cpp;toolbar:false;">
+int bs(int a[], int l, int h, int v)
+{
+    int m;
+    while (l &lt; h)
+    {
+        m = (l + h+1) &gt;&gt; 1;
+        if (a[m]&lt;=v)
+            l = m;
+        else
+            h = m - 1;
+    }
+    if(a[l]&gt;v)return -1;
+    return l;
+}
+</pre>
+
+<h5 id="小于的最后一个">小于的最后一个</h5><pre config="brush:cpp;toolbar:false;">
+int bs(int a[], int l, int h, int v)
+{
+    int m;
+    while (l &lt; h)
+    {
+        m = (l + h+1) &gt;&gt; 1;
+        if (a[m]&lt;v)
+            l = m;
+        else
+            h = m - 1;
+    }
+    if(a[l]&gt;=v)return -1;
+    return l;
+}
+</pre>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihel23jc000bdcwyp1tx8xlu" class="article-share-link" data-share="baidu" data-title="Hello World">分享到</a>
+        <a data-url="http://yoursite.com/2014/06/11/二分搜索总结/" data-id="cihel23iu0001dcwyq5pbv3qn" class="article-share-link" data-share="baidu" data-title="二分搜索总结">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2015/11/24/hello-world/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2014/06/11/二分搜索总结/#ds-thread" class="article-comment-link">評論</a>
       
 
       
@@ -121,10 +250,19 @@ Quick">
     
 <nav id="article-nav">
   
+    <a href="/2015/11/24/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
   
-    <a href="/2014/06/11/二分搜索总结/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2013/10/11/ural-1613/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">二分搜索总结</div>
+      <div class="article-nav-title">ural 1613</div>
     </a>
   
 </nav>
@@ -134,7 +272,7 @@ Quick">
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2015/11/24/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2015/11/24/hello-world/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2014/06/11/二分搜索总结/" data-title="二分搜索总结" data-url="http://yoursite.com/2014/06/11/二分搜索总结/"></div>
   </section>
 </section>
       

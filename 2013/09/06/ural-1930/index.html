@@ -4,21 +4,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Learning4Fun</title>
+  <title>ural 1930 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
+ * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
+ * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
+ * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
+ */
+#include &amp;lt;iostream&amp;gt;
+#include">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/11/24/hello-world/index.html">
+<meta property="og:title" content="ural 1930">
+<meta property="og:url" content="http://yoursite.com/2013/09/06/ural-1930/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-11-23T05:50:20.088Z">
+<meta property="og:description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
+ * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
+ * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
+ * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
+ */
+#include &amp;lt;iostream&amp;gt;
+#include">
+<meta property="og:updated_time" content="2015-11-25T04:37:58.633Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="ural 1930">
+<meta name="twitter:description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
+ * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
+ * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
+ * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
+ */
+#include &amp;lt;iostream&amp;gt;
+#include">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -71,10 +86,10 @@ Quick">
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-ural-1930" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/24/hello-world/" class="article-date">
-  <time datetime="2015-11-24T03:10:45.073Z" itemprop="datePublished">2015-11-24</time>
+    <a href="/2013/09/06/ural-1930/" class="article-date">
+  <time datetime="2013-09-06T03:13:55.000Z" itemprop="datePublished">2013-09-06</time>
 </a>
     
   </div>
@@ -85,7 +100,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      ural 1930
     </h1>
   
 
@@ -93,25 +108,111 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <pre config="brush:cpp;toolbar:false;">/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
+ * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
+ * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
+ * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
+ */
+#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+#include &lt;stack&gt;
+#include &lt;cstdio&gt;
+#include &lt;queue&gt;
+using namespace std;
+#define vN 10001*2
+#define vE 100001*2
+#define inf 0x3fffffff
+struct edge
+{
+    int v, next;
+    int c;
+} e[vE];
+int head[vN], used[vN][2], en;
+void addedge(int u, int v, int c)
+{
+    e[en].v = v;
+    e[en].c = c;
+    e[en].next = head[u];
+    head[u] = en++;
+}
+int dist[vN][2];
+int getv(int ut, int vt)
+{
+    if (ut == vt)
+        return 0;
+    return 1;
+}
+int spfa(int s, int t, int n)
+{
+    queue&lt;int&gt; q;
+    memset(used, 0, sizeof(used));
+    for (int i = 0; i &lt;= n; i++)
+    {
+        dist[i][0] = inf;
+        dist[i][1] = inf;
+    }
+    used[s][0] = 1;
+    dist[s][0] = 0;
+    dist[s][1] = 0;
+    used[s][1] = 1;
+    q.push(s);
+    q.push(0);
+    q.push(s);
+    q.push(1);
+    while (!q.empty())
+    {
+        int u = q.front();
+        q.pop();
+        int ut = q.front();
+        q.pop();
+        for (int i = head[u]; i != -1; i = e[i].next)
+        {
+            int v = e[i].v;
+            int vt = e[i].c;
+            if (dist[v][vt] &gt; dist[u][ut] + getv(ut, vt))
+            {
+                dist[v][vt] = dist[u][ut] + getv(ut, vt);
+                if (!used[v][vt])
+                {
+                    q.push(v);
+                    q.push(vt);
+                    used[v][vt] = 1;
+                }
+            }
 
+        }
+    }
+    return min(dist[t][0],dist[t][1]);
+}
+int main()
+{
+    //freopen("data.in", "r", stdin);
+    memset(head, -1, sizeof(head));
+    en = 0;
+    int n, m;
+    cin &gt;&gt; n &gt;&gt; m;
+    for (int i = 0; i &lt; m; i++)
+    {
+        int x, y;
+        cin &gt;&gt; x &gt;&gt; y;
+        addedge(x, y, 0);
+        addedge(y, x, 1);
+    }
+    int s, t;
+    cin &gt;&gt; s &gt;&gt; t;
+    cout &lt;&lt; spfa(s, t, n) &lt;&lt; endl;
+
+}</pre>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihel23jc000bdcwyp1tx8xlu" class="article-share-link" data-share="baidu" data-title="Hello World">分享到</a>
+        <a data-url="http://yoursite.com/2013/09/06/ural-1930/" data-id="cihel23iw0002dcwytdr9n24o" class="article-share-link" data-share="baidu" data-title="ural 1930">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2015/11/24/hello-world/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2013/09/06/ural-1930/#ds-thread" class="article-comment-link">評論</a>
       
 
       
@@ -121,10 +222,19 @@ Quick">
     
 <nav id="article-nav">
   
+    <a href="/2013/09/06/ural-1208/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          ural 1208
+        
+      </div>
+    </a>
   
-    <a href="/2014/06/11/二分搜索总结/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2013/09/05/ural-1210/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">二分搜索总结</div>
+      <div class="article-nav-title">ural 1210</div>
     </a>
   
 </nav>
@@ -134,7 +244,7 @@ Quick">
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2015/11/24/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2015/11/24/hello-world/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2013/09/06/ural-1930/" data-title="ural 1930" data-url="http://yoursite.com/2013/09/06/ural-1930/"></div>
   </section>
 </section>
       

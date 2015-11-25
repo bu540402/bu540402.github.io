@@ -4,21 +4,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Learning4Fun</title>
+  <title>ural 1208 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="/* 题意:给出n支acm队伍的名单，这名单中有的队员会重复出现在不同的队伍中。问
+ * 能从中挑选出最多少支不出现重复队员的队伍。
+ * 解法：求最大独立子集。NP完全的。数据小。暴力搜索。注意一个剪枝。见代码
+ */
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;cstring&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/11/24/hello-world/index.html">
+<meta property="og:title" content="ural 1208">
+<meta property="og:url" content="http://yoursite.com/2013/09/06/ural-1208/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-11-23T05:50:20.088Z">
+<meta property="og:description" content="/* 题意:给出n支acm队伍的名单，这名单中有的队员会重复出现在不同的队伍中。问
+ * 能从中挑选出最多少支不出现重复队员的队伍。
+ * 解法：求最大独立子集。NP完全的。数据小。暴力搜索。注意一个剪枝。见代码
+ */
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;cstring&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;l">
+<meta property="og:updated_time" content="2015-11-25T04:37:58.633Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="ural 1208">
+<meta name="twitter:description" content="/* 题意:给出n支acm队伍的名单，这名单中有的队员会重复出现在不同的队伍中。问
+ * 能从中挑选出最多少支不出现重复队员的队伍。
+ * 解法：求最大独立子集。NP完全的。数据小。暴力搜索。注意一个剪枝。见代码
+ */
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;cstring&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;l">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -71,10 +89,10 @@ Quick">
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-ural-1208" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/24/hello-world/" class="article-date">
-  <time datetime="2015-11-24T03:10:45.073Z" itemprop="datePublished">2015-11-24</time>
+    <a href="/2013/09/06/ural-1208/" class="article-date">
+  <time datetime="2013-09-06T06:41:51.000Z" itemprop="datePublished">2013-09-06</time>
 </a>
     
   </div>
@@ -85,7 +103,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      ural 1208
     </h1>
   
 
@@ -93,25 +111,103 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <pre config="brush:cpp;toolbar:false;">/* 题意:给出n支acm队伍的名单，这名单中有的队员会重复出现在不同的队伍中。问
+ * 能从中挑选出最多少支不出现重复队员的队伍。
+ * 解法：求最大独立子集。NP完全的。数据小。暴力搜索。注意一个剪枝。见代码
+ */
+#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+#include &lt;stack&gt;
+#include &lt;cstdio&gt;
+#include &lt;queue&gt;
+using namespace std;
+#define vN 10001*2
+#define vE 100001*2
+#define inf 0x3fffffff
+string s[30][3];
+int adj[20][20];
+int cnt;
+int n;
+int used[20];
+int judge(int x,int y)
+{
+    for(int i=0;i&lt;3;i++)
+    for(int j=0;j&lt;3;j++)
+    {
+        if(s[x][i]==s[y][j])
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+int dfs(int x,int lev,int used[])
+{
+    int flag=0;
+    int iused[20];
+    for(int i=0;i&lt;n;i++){
+        iused[i]=used[i];
+        if(adj[x][i])iused[i]=1;
+    }
+    iused[x]=1;
+    for(int i=0;i&lt;n;i++)
+    {
 
+        if(iused[i])continue;
+        iused[i]=1;//x之前的节点都要标记为1不在搜索之前的节点
+        dfs(i,lev+1,iused);
+        flag=1;
+    }
+    if(flag==0)
+    {
+        if(cnt&lt;lev)cnt=lev;
+    }
+    return 0;
+}
+int main()
+{
+    //freopen("data.in", "r", stdin);
+    cin &gt;&gt; n;
+    for (int i = 0; i &lt;n; i++)
+    {
+        cin&gt;&gt;s[i][0];
+        cin&gt;&gt;s[i][1];
+        cin&gt;&gt;s[i][2];
+    }
+    memset(adj,0,sizeof(adj));
+    for(int i=0;i&lt;n;i++)
+    {
+        for(int j=i+1;j&lt;n;j++)
+        {
+            if(judge(i,j))
+            {
+                adj[i][j]=1;
+                adj[j][i]=1;
+                //cout&lt;&lt;i&lt;&lt;j&lt;&lt;endl;
+            }
+        }
+    }
+    cnt=0;
+    for(int i=0;i&lt;n;i++)
+    {
+        memset(used,0,sizeof(used));
+        used[i]=1;
+        dfs(i,1,used);
+    }
+
+    cout&lt;&lt;cnt&lt;&lt;endl;
+
+}</pre>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihel23jc000bdcwyp1tx8xlu" class="article-share-link" data-share="baidu" data-title="Hello World">分享到</a>
+        <a data-url="http://yoursite.com/2013/09/06/ural-1208/" data-id="cihel23j30006dcwyeknexj81" class="article-share-link" data-share="baidu" data-title="ural 1208">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2015/11/24/hello-world/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2013/09/06/ural-1208/#ds-thread" class="article-comment-link">評論</a>
       
 
       
@@ -121,10 +217,19 @@ Quick">
     
 <nav id="article-nav">
   
+    <a href="/2013/09/06/ural-1109/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          ural 1109
+        
+      </div>
+    </a>
   
-    <a href="/2014/06/11/二分搜索总结/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2013/09/06/ural-1930/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">二分搜索总结</div>
+      <div class="article-nav-title">ural 1930</div>
     </a>
   
 </nav>
@@ -134,7 +239,7 @@ Quick">
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2015/11/24/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2015/11/24/hello-world/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2013/09/06/ural-1208/" data-title="ural 1208" data-url="http://yoursite.com/2013/09/06/ural-1208/"></div>
   </section>
 </section>
       

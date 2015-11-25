@@ -4,21 +4,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Learning4Fun</title>
+  <title>ural 1613 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="/*题意：给出n个数，给出q个询问L R V.对于每个询问问L R之间是否存在v
+ *解法：把原数组连同下标一起排序。对于每个询问问查询一个第一个大于等于v且下标大于等于L的
+ *的数字。若该数字和v相同且下标在LR之间。则为1否则为0.
+ * 
+ */
+#include &amp;lt;functional&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;iost">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/11/24/hello-world/index.html">
+<meta property="og:title" content="ural 1613">
+<meta property="og:url" content="http://yoursite.com/2013/10/11/ural-1613/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-11-23T05:50:20.088Z">
+<meta property="og:description" content="/*题意：给出n个数，给出q个询问L R V.对于每个询问问L R之间是否存在v
+ *解法：把原数组连同下标一起排序。对于每个询问问查询一个第一个大于等于v且下标大于等于L的
+ *的数字。若该数字和v相同且下标在LR之间。则为1否则为0.
+ * 
+ */
+#include &amp;lt;functional&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;iost">
+<meta property="og:updated_time" content="2015-11-25T04:37:58.633Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="ural 1613">
+<meta name="twitter:description" content="/*题意：给出n个数，给出q个询问L R V.对于每个询问问L R之间是否存在v
+ *解法：把原数组连同下标一起排序。对于每个询问问查询一个第一个大于等于v且下标大于等于L的
+ *的数字。若该数字和v相同且下标在LR之间。则为1否则为0.
+ * 
+ */
+#include &amp;lt;functional&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;iost">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -71,10 +89,10 @@ Quick">
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-ural-1613" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/24/hello-world/" class="article-date">
-  <time datetime="2015-11-24T03:10:45.073Z" itemprop="datePublished">2015-11-24</time>
+    <a href="/2013/10/11/ural-1613/" class="article-date">
+  <time datetime="2013-10-11T12:22:37.000Z" itemprop="datePublished">2013-10-11</time>
 </a>
     
   </div>
@@ -85,7 +103,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      ural 1613
     </h1>
   
 
@@ -93,25 +111,85 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <pre config="brush:cpp;toolbar:false;">/*题意：给出n个数，给出q个询问L R V.对于每个询问问L R之间是否存在v
+ *解法：把原数组连同下标一起排序。对于每个询问问查询一个第一个大于等于v且下标大于等于L的
+ *的数字。若该数字和v相同且下标在LR之间。则为1否则为0.
+ * 
+ */
+#include &lt;functional&gt;
+#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+//#include &lt;fstream&gt;
+#include &lt;sstream&gt;
+#include &lt;iomanip&gt;
+#include &lt;numeric&gt;
+#include &lt;cstring&gt;
+#include &lt;cassert&gt;
+#include &lt;cstdio&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;bitset&gt;
+#include &lt;queue&gt;
+#include &lt;stack&gt;
+#include &lt;ctime&gt;
+#include &lt;list&gt;
+#include &lt;set&gt;
+#include &lt;map&gt;
+#include &lt;math.h&gt;
+using namespace std;
+struct data
+{
+        int val;
+        int rank;
+        bool operator &lt;(const data &amp;d)const
+        {
+            if (d.val == val)
+                return rank &lt; d.rank;
+            return val &lt; d.val;
+        }
 
+};
+vector&lt;data&gt; base;
+int main()
+{
+    freopen("data.in", "r", stdin);
+    int n;
+    cin &gt;&gt; n;
+    for (int i = 1; i &lt;= n; i++)
+    {
+        data a;
+        cin &gt;&gt; a.val;
+        a.rank = i;
+        base.push_back(a);
+    }
+    sort(base.begin(), base.end());
+    int q;
+    cin &gt;&gt; q;
+    vector&lt;data&gt;::iterator it;
+    for (int i = 0; i &lt; q; i++)
+    {
+        int x, y, d;
+        data a;
+        cin &gt;&gt; x &gt;&gt; y &gt;&gt; d;
+        a.val = d;
+        a.rank = x;
+        it = lower_bound(base.begin(), base.end(), a);
+        if (it-&gt;val == d &amp;&amp; (it-&gt;rank &gt;= x &amp;&amp; it-&gt;rank &lt;= y))
+            cout &lt;&lt; 1;
+        else
+            cout &lt;&lt; 0;
+
+    }
+}</pre>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihel23jc000bdcwyp1tx8xlu" class="article-share-link" data-share="baidu" data-title="Hello World">分享到</a>
+        <a data-url="http://yoursite.com/2013/10/11/ural-1613/" data-id="cihel23iy0003dcwyrmngomgj" class="article-share-link" data-share="baidu" data-title="ural 1613">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2015/11/24/hello-world/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2013/10/11/ural-1613/#ds-thread" class="article-comment-link">評論</a>
       
 
       
@@ -121,10 +199,19 @@ Quick">
     
 <nav id="article-nav">
   
+    <a href="/2014/06/11/二分搜索总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          二分搜索总结
+        
+      </div>
+    </a>
   
-    <a href="/2014/06/11/二分搜索总结/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2013/09/10/ural-1016/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">二分搜索总结</div>
+      <div class="article-nav-title">ural 1016</div>
     </a>
   
 </nav>
@@ -134,7 +221,7 @@ Quick">
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2015/11/24/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2015/11/24/hello-world/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2013/10/11/ural-1613/" data-title="ural 1613" data-url="http://yoursite.com/2013/10/11/ural-1613/"></div>
   </section>
 </section>
       
