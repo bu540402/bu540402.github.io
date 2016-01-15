@@ -3,7 +3,10 @@
 <html>
 <head>
 <meta charset="iso-8859-1" content="text/html" http-equiv="Content-Type">
-  <script type="text/javascript" src="http://cdn.clappr.io/latest/clappr.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://cdn.clappr.io/latest/underscore.js"> </script>
+<script type="text/javascript" charset="utf-8" src="http://cdn.clappr.io/latest/jquery.js"> </script>
+<script type="text/javascript" charset="utf-8" src="http://cdn.clappr.io/latest/clappr.min.js"> </script>
+
 </head>
 
 <body>
@@ -12,7 +15,7 @@
   <div class="clip-preview">
   <div id="player"></div>
       <script>
-    var player = new Clappr.Player({source: "http://d18z3rdc0p03tc.cloudfront.net/a613356e3f224b4f962d36afff5e2617-640.m3u8", parentId: "#player"});
+    var player = new Clappr.Player({source: "http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8", parentId: "#player"});
   </script>
     <p>This player's <code>&lt;source&gt;</code> element is an <code>.m3u8</code> playlist that excludes
     the low-bandwith <code>.aac</code>.<p>
