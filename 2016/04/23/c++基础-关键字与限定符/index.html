@@ -4,39 +4,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ural 1613 | Learning4Fun</title>
+  <title>c++基础：关键字与限定符 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="/*题意：给出n个数，给出q个询问L R V.对于每个询问问L R之间是否存在v
- *解法：把原数组连同下标一起排序。对于每个询问问查询一个第一个大于等于v且下标大于等于L的
- *的数字。若该数字和v相同且下标在LR之间。则为1否则为0.
- * 
- */
-#include &amp;lt;functional&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-#include &amp;lt;iost">
+  <meta name="description" content="#c++基础：关键字与限定符[TOC]
+##const 限定符const限定符用于限定一个对象不能发生改变。
+
+
+const对象必须被初始化，初始值可以使任意复杂的表达式
+const对象只能执行不改变其值得操作
+const对象被设定为仅在文件内有效">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ural 1613">
-<meta property="og:url" content="http://yoursite.com/2013/10/11/ural-1613/index.html">
+<meta property="og:title" content="c++基础：关键字与限定符">
+<meta property="og:url" content="http://yoursite.com/2016/04/23/c++基础-关键字与限定符/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="/*题意：给出n个数，给出q个询问L R V.对于每个询问问L R之间是否存在v
- *解法：把原数组连同下标一起排序。对于每个询问问查询一个第一个大于等于v且下标大于等于L的
- *的数字。若该数字和v相同且下标在LR之间。则为1否则为0.
- * 
- */
-#include &amp;lt;functional&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-#include &amp;lt;iost">
-<meta property="og:updated_time" content="2015-11-25T04:37:58.633Z">
+<meta property="og:description" content="#c++基础：关键字与限定符[TOC]
+##const 限定符const限定符用于限定一个对象不能发生改变。
+
+
+const对象必须被初始化，初始值可以使任意复杂的表达式
+const对象只能执行不改变其值得操作
+const对象被设定为仅在文件内有效">
+<meta property="og:updated_time" content="2016-04-23T11:21:48.847Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ural 1613">
-<meta name="twitter:description" content="/*题意：给出n个数，给出q个询问L R V.对于每个询问问L R之间是否存在v
- *解法：把原数组连同下标一起排序。对于每个询问问查询一个第一个大于等于v且下标大于等于L的
- *的数字。若该数字和v相同且下标在LR之间。则为1否则为0.
- * 
- */
-#include &amp;lt;functional&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-#include &amp;lt;iost">
+<meta name="twitter:title" content="c++基础：关键字与限定符">
+<meta name="twitter:description" content="#c++基础：关键字与限定符[TOC]
+##const 限定符const限定符用于限定一个对象不能发生改变。
+
+
+const对象必须被初始化，初始值可以使任意复杂的表达式
+const对象只能执行不改变其值得操作
+const对象被设定为仅在文件内有效">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -91,10 +88,10 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-ural-1613" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-c++基础-关键字与限定符" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/10/11/ural-1613/" class="article-date">
-  <time datetime="2013-10-11T12:22:37.000Z" itemprop="datePublished">2013-10-11</time>
+    <a href="/2016/04/23/c++基础-关键字与限定符/" class="article-date">
+  <time datetime="2016-04-23T10:24:33.000Z" itemprop="datePublished">2016-04-23</time>
 </a>
     
   </div>
@@ -105,7 +102,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ural 1613
+      c++基础：关键字与限定符
     </h1>
   
 
@@ -113,107 +110,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre config="brush:cpp;toolbar:false;">/*题意：给出n个数，给出q个询问L R V.对于每个询问问L R之间是否存在v
- *解法：把原数组连同下标一起排序。对于每个询问问查询一个第一个大于等于v且下标大于等于L的
- *的数字。若该数字和v相同且下标在LR之间。则为1否则为0.
- * 
- */
-#include &lt;functional&gt;
-#include &lt;algorithm&gt;
-#include &lt;iostream&gt;
-//#include &lt;fstream&gt;
-#include &lt;sstream&gt;
-#include &lt;iomanip&gt;
-#include &lt;numeric&gt;
-#include &lt;cstring&gt;
-#include &lt;cassert&gt;
-#include &lt;cstdio&gt;
-#include &lt;string&gt;
-#include &lt;vector&gt;
-#include &lt;bitset&gt;
-#include &lt;queue&gt;
-#include &lt;stack&gt;
-#include &lt;ctime&gt;
-#include &lt;list&gt;
-#include &lt;set&gt;
-#include &lt;map&gt;
-#include &lt;math.h&gt;
-using namespace std;
-struct data
-{
-        int val;
-        int rank;
-        bool operator &lt;(const data &amp;d)const
-        {
-            if (d.val == val)
-                return rank &lt; d.rank;
-            return val &lt; d.val;
-        }
+        <p>#c++基础：关键字与限定符<br>[TOC]</p>
+<p>##const 限定符<br>const限定符用于限定一个对象不能发生改变。</p>
+<blockquote>
+<ul>
+<li>const对象必须被初始化，初始值可以使任意复杂的表达式</li>
+<li>const对象只能执行不改变其值得操作</li>
+<li>const对象被设定为仅在文件内有效</li>
+</ul>
+</blockquote>
 
-};
-vector&lt;data&gt; base;
-int main()
-{
-    freopen("data.in", "r", stdin);
-    int n;
-    cin &gt;&gt; n;
-    for (int i = 1; i &lt;= n; i++)
-    {
-        data a;
-        cin &gt;&gt; a.val;
-        a.rank = i;
-        base.push_back(a);
-    }
-    sort(base.begin(), base.end());
-    int q;
-    cin &gt;&gt; q;
-    vector&lt;data&gt;::iterator it;
-    for (int i = 0; i &lt; q; i++)
-    {
-        int x, y, d;
-        data a;
-        cin &gt;&gt; x &gt;&gt; y &gt;&gt; d;
-        a.val = d;
-        a.rank = x;
-        it = lower_bound(base.begin(), base.end(), a);
-        if (it-&gt;val == d &amp;&amp; (it-&gt;rank &gt;= x &amp;&amp; it-&gt;rank &lt;= y))
-            cout &lt;&lt; 1;
-        else
-            cout &lt;&lt; 0;
-
-    }
-}</pre>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2013/10/11/ural-1613/" data-id="cind1r5mq00029cwywn2gisz5" class="article-share-link" data-share="baidu" data-title="ural 1613">分享到</a>
+        <a data-url="http://yoursite.com/2016/04/23/c++基础-关键字与限定符/" data-id="cind2378y0000s4wypbdq0xrj" class="article-share-link" data-share="baidu" data-title="c++基础：关键字与限定符">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2013/10/11/ural-1613/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2016/04/23/c++基础-关键字与限定符/#ds-thread" class="article-comment-link">評論</a>
       
 
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程语言/">编程语言</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2014/06/11/二分搜索总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">
-        
-          二分搜索总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2013/09/10/ural-1016/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/04/23/c++基础-指针与引用/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">ural 1016</div>
+      <div class="article-nav-title">c++基础：指针与引用</div>
     </a>
   
 </nav>
@@ -223,7 +153,7 @@ int main()
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2013/10/11/ural-1613/" data-title="ural 1613" data-url="http://yoursite.com/2013/10/11/ural-1613/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/04/23/c++基础-关键字与限定符/" data-title="c++基础：关键字与限定符" data-url="http://yoursite.com/2016/04/23/c++基础-关键字与限定符/"></div>
   </section>
 </section>
       
