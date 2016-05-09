@@ -11,7 +11,7 @@
 
 
  引用并非对象，所以不能定义引用的引用。
- 引用只能绑定在对">
+ 非常量引用只能绑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++基础：指针与引用">
 <meta property="og:url" content="http://yoursite.com/2016/04/23/c++基础-指针与引用/index.html">
@@ -21,8 +21,8 @@
 
 
  引用并非对象，所以不能定义引用的引用。
- 引用只能绑定在对">
-<meta property="og:updated_time" content="2016-04-23T11:43:05.043Z">
+ 非常量引用只能绑">
+<meta property="og:updated_time" content="2016-05-09T02:45:29.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++基础：指针与引用">
 <meta name="twitter:description" content="c++基础：指针与引用[TOC]
@@ -30,7 +30,7 @@
 
 
  引用并非对象，所以不能定义引用的引用。
- 引用只能绑定在对">
+ 非常量引用只能绑">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -112,7 +112,8 @@
 <blockquote>
 <ol>
 <li><strong> 引用并非对象，所以不能定义引用的引用。</strong></li>
-<li><strong> 引用只能绑定在对象上，而不能绑定字面指或者表达式结果。</strong></li>
+<li><strong> 非常量引用只能绑定在对象上，而不能绑定字面指或者表达式结果。</strong></li>
+<li><strong>不要返回局部对象的引用或者指针，因为函数完成后他所占用的存储空间也会随之释放，因为局部变量的引用将指向不再有效的内存区域</strong></li>
 </ol>
 </blockquote>
 <h3 id="常量引用">常量引用</h3><p>常量引用是对const的引用。对常量的引用不能被用作修改它所绑定的对象。</p>
@@ -124,7 +125,8 @@
 </li>
 </ol>
 </blockquote>
-<h3 id="右值引用">右值引用</h3><p>等待更新</p>
+<h3 id="右值引用">右值引用</h3><p>函数的返回类型决定函数调用是否为左值，调用一个返回引用的函数得到左值，其他类型得到右值。例如可以这样<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> &amp;<span class="title">getVal</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line">getVal()=<span class="string">'F'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>等待更新</p>
 <h2 id="指针">指针</h2><h3 id="指针基础">指针基础</h3><p>指针是用来存储地址的变量。他是指向另一种类型的复合类型。<strong> 指针本身就是一个对象，允许对指针赋值和拷贝。在其声明周期内可以指向不同的对象</strong>。指针无需再定义时赋值，没有被初始化的指针拥有一个不确定的值。<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明指针的两种形式</span></span><br><span class="line"><span class="keyword">int</span> *p,*q;</span><br><span class="line"><span class="keyword">int</span>* p;</span><br><span class="line"><span class="keyword">int</span>* q;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <ol>
@@ -153,7 +155,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2016/04/23/c++基础-指针与引用/" data-id="cingy2n2c000uskwyhskglpl8" class="article-share-link" data-share="baidu" data-title="c++基础：指针与引用">分享到</a>
+        <a data-url="http://yoursite.com/2016/04/23/c++基础-指针与引用/" data-id="cinzje83b000ut0wylnrhc11s" class="article-share-link" data-share="baidu" data-title="c++基础：指针与引用">分享到</a>
       
 
       

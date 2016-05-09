@@ -8,32 +8,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="c++基础：关键字与限定符[TOC]
 const 限定符const限定符用于限定一个对象不能发生改变。
-
+const修饰对象
 
 const对象必须被初始化，初始值可以使任意复杂的表达式
 const对象只能执行不改变其值得操作
-const对象被设定为仅在文件内有效">
+const对象被设定为仅在文件内有效
+const对象以及常量对象的引用或者指针只能调用常量成员函数
+
+
+const修饰类成员函数const修饰类成员函数相当于把修改隐式this">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++基础：关键字与限定符">
 <meta property="og:url" content="http://yoursite.com/2016/04/23/c++基础-关键字与限定符/index.html">
 <meta property="og:site_name" content="Learning4Fun">
 <meta property="og:description" content="c++基础：关键字与限定符[TOC]
 const 限定符const限定符用于限定一个对象不能发生改变。
-
+const修饰对象
 
 const对象必须被初始化，初始值可以使任意复杂的表达式
 const对象只能执行不改变其值得操作
-const对象被设定为仅在文件内有效">
-<meta property="og:updated_time" content="2016-04-23T11:43:12.650Z">
+const对象被设定为仅在文件内有效
+const对象以及常量对象的引用或者指针只能调用常量成员函数
+
+
+const修饰类成员函数const修饰类成员函数相当于把修改隐式this">
+<meta property="og:updated_time" content="2016-05-09T04:57:02.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++基础：关键字与限定符">
 <meta name="twitter:description" content="c++基础：关键字与限定符[TOC]
 const 限定符const限定符用于限定一个对象不能发生改变。
-
+const修饰对象
 
 const对象必须被初始化，初始值可以使任意复杂的表达式
 const对象只能执行不改变其值得操作
-const对象被设定为仅在文件内有效">
+const对象被设定为仅在文件内有效
+const对象以及常量对象的引用或者指针只能调用常量成员函数
+
+
+const修饰类成员函数const修饰类成员函数相当于把修改隐式this">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -112,11 +124,25 @@ const对象被设定为仅在文件内有效">
       
         <h1 id="c++基础：关键字与限定符">c++基础：关键字与限定符</h1><p>[TOC]</p>
 <h2 id="const_限定符">const 限定符</h2><p>const限定符用于限定一个对象不能发生改变。</p>
-<blockquote>
+<h3 id="const修饰对象">const修饰对象</h3><blockquote>
 <ul>
 <li>const对象必须被初始化，初始值可以使任意复杂的表达式</li>
 <li>const对象只能执行不改变其值得操作</li>
 <li>const对象被设定为仅在文件内有效</li>
+<li>const对象以及常量对象的引用或者指针只能调用常量成员函数</li>
+</ul>
+</blockquote>
+<h3 id="const修饰类成员函数">const修饰类成员函数</h3><p>const修饰类成员函数相当于把修改隐式this指针的类型，this指针默认情况下是一个指向非常量对象的常量指针。const修饰成员函数之后，this指针的类型被改变为指向常量对象的常量指针。所以const修饰函数无法改变类的成员。</p>
+<blockquote>
+<ul>
+<li>const修饰类成员函数时，表面该函数不能修改类成员，否则编译器会报错</li>
+</ul>
+</blockquote>
+<h3 id="const修饰引用与指针">const修饰引用与指针</h3><p>详见</p>
+<h3 id="const与函数重载">const与函数重载</h3><blockquote>
+<ul>
+<li>在函数重载中，顶层const（自身是常量的对象：常量对象或者本身是常量的指针）的形参无法与非顶层const的形参区分开来。</li>
+<li>在函数重载重，底层 const（常量引用以及指向常量的指针）可以与非常量对象区别从而实现重载</li>
 </ul>
 </blockquote>
 
@@ -124,7 +150,7 @@ const对象被设定为仅在文件内有效">
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2016/04/23/c++基础-关键字与限定符/" data-id="cingy2n0v0000skwybrrgaclw" class="article-share-link" data-share="baidu" data-title="c++基础：关键字与限定符">分享到</a>
+        <a data-url="http://yoursite.com/2016/04/23/c++基础-关键字与限定符/" data-id="cinzje81w0000t0wy414k2mvn" class="article-share-link" data-share="baidu" data-title="c++基础：关键字与限定符">分享到</a>
       
 
       
