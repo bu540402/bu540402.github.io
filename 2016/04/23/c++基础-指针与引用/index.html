@@ -22,7 +22,7 @@
 
  引用并非对象，所以不能定义引用的引用。
  非常量引用只能绑">
-<meta property="og:updated_time" content="2016-05-09T02:45:29.478Z">
+<meta property="og:updated_time" content="2016-05-12T11:19:25.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++基础：指针与引用">
 <meta name="twitter:description" content="c++基础：指针与引用[TOC]
@@ -144,18 +144,18 @@
 <h3 id="常量指针">常量指针</h3><p>指针本身是一个对象，如果指针被声明为常量指针，该指针本身是一个常量，一旦指定一个对象不能再做更改。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> *<span class="keyword">const</span> p=&amp;a;<span class="comment">//p不能再指向其他对象，可以通过p改变a</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> b2=<span class="number">20</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *<span class="keyword">const</span> q=&amp;b2;<span class="comment">//q本身是指向一个常量的常量指针。不能通过q改变对象，q的指向也不能改变。</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="函数指针">函数指针</h3><h2 id="指针与引用的对比">指针与引用的对比</h2><h3 id="顶层const与底层const">顶层const与底层const</h3><p>顶层const 表示指针本身是常量<br>底层const 表示指针所指的对象是常量</p>
 <h3 id="指针与引用的优劣">指针与引用的优劣</h3><ul>
-<li><em>指针可以为空或者未初始化的状态而引用必须出示话，从这个角度来讲指针比引用更危险。</em></li>
+<li><em>指针可以为空或者未初始化的状态而引用必须初始化，从这个角度来讲指针比引用更危险。</em></li>
 <li><em>通过指针new出来的空间必须delete才能释放掉。可能会造成内存泄漏</em></li>
 <li><em>通过引用来传递参数,可以减少对象的复制，增强效率</em></li>
 </ul>
-<h3 id="指向指针的引用">指向指针的引用</h3><p>指针的引用，相当于一个指针。保持和原来指针一样的属性。然后似乎并没有指向引用的指针。</p>
+<h3 id="指针和引用作为函数参数分别适用于什么情况">指针和引用作为函数参数分别适用于什么情况</h3><h3 id="指向指针的引用">指向指针的引用</h3><p>指针的引用，相当于一个指针。保持和原来指针一样的属性。然后似乎并没有指向引用的指针。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> str=<span class="number">10</span>;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> dataA=<span class="number">10</span>;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span>* dataPrtA=&amp;dataA;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> dataB=<span class="number">20</span>;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span>* dataPrtB=&amp;dataB;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span>* &amp;dataRef=dataPrtA;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;*dataRef&lt;&lt;endl;</span><br><span class="line">	dataRef=dataPrtB;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;*dataRef&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2016/04/23/c++基础-指针与引用/" data-id="cinzje83b000ut0wylnrhc11s" class="article-share-link" data-share="baidu" data-title="c++基础：指针与引用">分享到</a>
+        <a data-url="http://yoursite.com/2016/04/23/c++基础-指针与引用/" data-id="cio53mhvj0010k8wybw1t0ajy" class="article-share-link" data-share="baidu" data-title="c++基础：指针与引用">分享到</a>
       
 
       
@@ -205,7 +205,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標簽</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程语言/">编程语言</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进程/">进程</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程语言/">编程语言</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进程/">进程</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -223,7 +223,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">歸檔</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -235,23 +235,23 @@
       <ul>
         
           <li>
+            <a href="/2016/05/12/git使用手册/">git使用手册</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/12/数据结构-hash表/">数据结构-hash表</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/12/c++基础-异常处理/">c++基础-异常处理</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/12/c++基础-零散知识点总结/">c++基础：零散知识点总结</a>
+          </li>
+        
+          <li>
             <a href="/2016/04/26/c++基础-类与继承/">c++基础-类与继承</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/25/coding技巧集锦/">coding技巧集锦</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/25/手写程序集锦/">手写程序集锦</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/25/操作系统基础-进程/">操作系统基础-进程</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/23/c++基础-关键字与限定符/">c++基础：关键字与限定符</a>
           </li>
         
       </ul>

@@ -4,36 +4,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ural 1930 | Learning4Fun</title>
+  <title>coding技巧集锦 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
- * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
- * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
- * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
- */
-#include &amp;lt;iostream&amp;gt;
-#include">
+  <meta name="description" content="调用堆栈调用堆栈最经常被用于存放子程序的返回地址。在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址。因此，如果被调用的子程序还要调用其他的子程序，其自身的返回地址就必须存入调用堆栈，在其自身运行完毕后再行取回。在递归程序中，每一层次递归都必须在调用堆栈上增加一条地址，因此如果程序出现无限递归（或仅仅是过多的递归层次），调用堆栈就会产生堆栈溢出。调用堆栈的主要功能是存放返回地址。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ural 1930">
-<meta property="og:url" content="http://yoursite.com/2013/09/06/ural-1930/index.html">
+<meta property="og:title" content="coding技巧集锦">
+<meta property="og:url" content="http://yoursite.com/2016/04/25/coding技巧总结/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
- * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
- * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
- * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
- */
-#include &amp;lt;iostream&amp;gt;
-#include">
-<meta property="og:updated_time" content="2015-11-25T04:37:58.633Z">
+<meta property="og:description" content="调用堆栈调用堆栈最经常被用于存放子程序的返回地址。在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址。因此，如果被调用的子程序还要调用其他的子程序，其自身的返回地址就必须存入调用堆栈，在其自身运行完毕后再行取回。在递归程序中，每一层次递归都必须在调用堆栈上增加一条地址，因此如果程序出现无限递归（或仅仅是过多的递归层次），调用堆栈就会产生堆栈溢出。调用堆栈的主要功能是存放返回地址。">
+<meta property="og:updated_time" content="2016-04-25T05:32:44.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ural 1930">
-<meta name="twitter:description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
- * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
- * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
- * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
- */
-#include &amp;lt;iostream&amp;gt;
-#include">
+<meta name="twitter:title" content="coding技巧集锦">
+<meta name="twitter:description" content="调用堆栈调用堆栈最经常被用于存放子程序的返回地址。在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址。因此，如果被调用的子程序还要调用其他的子程序，其自身的返回地址就必须存入调用堆栈，在其自身运行完毕后再行取回。在递归程序中，每一层次递归都必须在调用堆栈上增加一条地址，因此如果程序出现无限递归（或仅仅是过多的递归层次），调用堆栈就会产生堆栈溢出。调用堆栈的主要功能是存放返回地址。">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -88,10 +70,10 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-ural-1930" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-coding技巧总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/06/ural-1930/" class="article-date">
-  <time datetime="2013-09-06T03:13:55.000Z" itemprop="datePublished">2013-09-06</time>
+    <a href="/2016/04/25/coding技巧总结/" class="article-date">
+  <time datetime="2016-04-25T04:50:05.000Z" itemprop="datePublished">2016-04-25</time>
 </a>
     
   </div>
@@ -102,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ural 1930
+      coding技巧集锦
     </h1>
   
 
@@ -110,111 +92,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre config="brush:cpp;toolbar:false;">/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
- * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
- * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
- * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
- */
-#include &lt;iostream&gt;
-#include &lt;cstring&gt;
-#include &lt;algorithm&gt;
-#include &lt;stack&gt;
-#include &lt;cstdio&gt;
-#include &lt;queue&gt;
-using namespace std;
-#define vN 10001*2
-#define vE 100001*2
-#define inf 0x3fffffff
-struct edge
-{
-    int v, next;
-    int c;
-} e[vE];
-int head[vN], used[vN][2], en;
-void addedge(int u, int v, int c)
-{
-    e[en].v = v;
-    e[en].c = c;
-    e[en].next = head[u];
-    head[u] = en++;
-}
-int dist[vN][2];
-int getv(int ut, int vt)
-{
-    if (ut == vt)
-        return 0;
-    return 1;
-}
-int spfa(int s, int t, int n)
-{
-    queue&lt;int&gt; q;
-    memset(used, 0, sizeof(used));
-    for (int i = 0; i &lt;= n; i++)
-    {
-        dist[i][0] = inf;
-        dist[i][1] = inf;
-    }
-    used[s][0] = 1;
-    dist[s][0] = 0;
-    dist[s][1] = 0;
-    used[s][1] = 1;
-    q.push(s);
-    q.push(0);
-    q.push(s);
-    q.push(1);
-    while (!q.empty())
-    {
-        int u = q.front();
-        q.pop();
-        int ut = q.front();
-        q.pop();
-        for (int i = head[u]; i != -1; i = e[i].next)
-        {
-            int v = e[i].v;
-            int vt = e[i].c;
-            if (dist[v][vt] &gt; dist[u][ut] + getv(ut, vt))
-            {
-                dist[v][vt] = dist[u][ut] + getv(ut, vt);
-                if (!used[v][vt])
-                {
-                    q.push(v);
-                    q.push(vt);
-                    used[v][vt] = 1;
-                }
-            }
-
-        }
-    }
-    return min(dist[t][0],dist[t][1]);
-}
-int main()
-{
-    //freopen("data.in", "r", stdin);
-    memset(head, -1, sizeof(head));
-    en = 0;
-    int n, m;
-    cin &gt;&gt; n &gt;&gt; m;
-    for (int i = 0; i &lt; m; i++)
-    {
-        int x, y;
-        cin &gt;&gt; x &gt;&gt; y;
-        addedge(x, y, 0);
-        addedge(y, x, 1);
-    }
-    int s, t;
-    cin &gt;&gt; s &gt;&gt; t;
-    cout &lt;&lt; spfa(s, t, n) &lt;&lt; endl;
-
-}</pre>
+        <h2 id="调用堆栈">调用堆栈</h2><p>调用堆栈最经常被用于存放子程序的返回地址。在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址。因此，如果被调用的子程序还要调用其他的子程序，其自身的返回地址就必须存入调用堆栈，在其自身运行完毕后再行取回。在递归程序中，每一层次递归都必须在调用堆栈上增加一条地址，因此如果程序出现无限递归（或仅仅是过多的递归层次），调用堆栈就会产生堆栈溢出。<br>调用堆栈的主要功能是存放返回地址。除此之外，调用堆栈还用于存放：<br>本地变量：子程序的变量可以存入调用堆栈，这样可以达到不同子程序间变量分离开的作用。<br>参数传递：如果寄存器不足以容纳子程序的参数，可以在调用堆栈上存入参数。<br>环境传递：有些语言（如Pascal与Ada）支持“多层子程序”，即子程序中可以利用主程序的本地变量。这些变量可以通过调用堆栈传入子程序。</p>
+<h2 id="堆与栈">堆与栈</h2><h3 id="C/C++的堆栈">C/C++的堆栈</h3><p>一个由C/C++编译的程序占用的内存分为以下几个部分：</p>
+<ol>
+<li>栈区（stack）— 由编译器自动分配释放 ，存放函数的参数名，局部变量的名等。其操作方式类似于数据结构中的栈。</li>
+<li>堆区（heap）— 由程序员分配释放， 若程序员不释放，程序结束时可能由OS回收。注意它与数据结构中的堆是两回事，分配方式倒是类似于链表。</li>
+<li>静态区（static）—全局变量和局部静态变量的存储是放在一块的。程序结束后由系统释放。</li>
+<li>文字常量区—常量字符串就是放在这里的，程序结束后由系统释放 。</li>
+<li>程序代码区— 存放函数体的二进制代码。</li>
+</ol>
+<h3 id="java中的堆栈">java中的堆栈</h3>
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2013/09/06/ural-1930/" data-id="cio53mhup000fk8wyybh4y7y8" class="article-share-link" data-share="baidu" data-title="ural 1930">分享到</a>
+        <a data-url="http://yoursite.com/2016/04/25/coding技巧总结/" data-id="cio53mhvc000rk8wyk41r03uu" class="article-share-link" data-share="baidu" data-title="coding技巧集锦">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2013/09/06/ural-1930/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2016/04/25/coding技巧总结/#ds-thread" class="article-comment-link">評論</a>
       
 
       
@@ -224,19 +120,19 @@ int main()
     
 <nav id="article-nav">
   
-    <a href="/2013/09/06/ural-1208/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/04/26/c++基础-类与继承/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">
         
-          ural 1208
+          c++基础-类与继承
         
       </div>
     </a>
   
   
-    <a href="/2013/09/05/ural-1210/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/04/25/手写程序集锦/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">ural 1210</div>
+      <div class="article-nav-title">手写程序集锦</div>
     </a>
   
 </nav>
@@ -246,7 +142,7 @@ int main()
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2013/09/06/ural-1930/" data-title="ural 1930" data-url="http://yoursite.com/2013/09/06/ural-1930/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/04/25/coding技巧总结/" data-title="coding技巧集锦" data-url="http://yoursite.com/2016/04/25/coding技巧总结/"></div>
   </section>
 </section>
       

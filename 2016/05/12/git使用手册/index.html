@@ -4,36 +4,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ural 1930 | Learning4Fun</title>
+  <title>git使用手册 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
- * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
- * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
- * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
- */
-#include &amp;lt;iostream&amp;gt;
-#include">
+  <meta name="description" content="Learning，Coding，Recording">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ural 1930">
-<meta property="og:url" content="http://yoursite.com/2013/09/06/ural-1930/index.html">
+<meta property="og:title" content="git使用手册">
+<meta property="og:url" content="http://yoursite.com/2016/05/12/git使用手册/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
- * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
- * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
- * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
- */
-#include &amp;lt;iostream&amp;gt;
-#include">
-<meta property="og:updated_time" content="2015-11-25T04:37:58.633Z">
+<meta property="og:description" content="Learning，Coding，Recording">
+<meta property="og:updated_time" content="2016-05-12T13:03:32.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ural 1930">
-<meta name="twitter:description" content="/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
- * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
- * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
- * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
- */
-#include &amp;lt;iostream&amp;gt;
-#include">
+<meta name="twitter:title" content="git使用手册">
+<meta name="twitter:description" content="Learning，Coding，Recording">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -88,10 +70,10 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-ural-1930" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-git使用手册" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/06/ural-1930/" class="article-date">
-  <time datetime="2013-09-06T03:13:55.000Z" itemprop="datePublished">2013-09-06</time>
+    <a href="/2016/05/12/git使用手册/" class="article-date">
+  <time datetime="2016-05-12T13:03:32.000Z" itemprop="datePublished">2016-05-12</time>
 </a>
     
   </div>
@@ -102,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ural 1930
+      git使用手册
     </h1>
   
 
@@ -110,111 +92,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre config="brush:cpp;toolbar:false;">/* 题意:给出一个图，有一个起点和终点，现在开车从起点驶向重点，路分为上坡和下坡。
- * 求一条从起点到终点的路径使得上下坡转换的次数最少。;
- * 解法：最短路，spfa。把一点拆成以上坡到达和下坡达到两个点。
- * dist[v][vt]=min(dist[v][vt],dist[u][ut]+(ut!=vt));
- */
-#include &lt;iostream&gt;
-#include &lt;cstring&gt;
-#include &lt;algorithm&gt;
-#include &lt;stack&gt;
-#include &lt;cstdio&gt;
-#include &lt;queue&gt;
-using namespace std;
-#define vN 10001*2
-#define vE 100001*2
-#define inf 0x3fffffff
-struct edge
-{
-    int v, next;
-    int c;
-} e[vE];
-int head[vN], used[vN][2], en;
-void addedge(int u, int v, int c)
-{
-    e[en].v = v;
-    e[en].c = c;
-    e[en].next = head[u];
-    head[u] = en++;
-}
-int dist[vN][2];
-int getv(int ut, int vt)
-{
-    if (ut == vt)
-        return 0;
-    return 1;
-}
-int spfa(int s, int t, int n)
-{
-    queue&lt;int&gt; q;
-    memset(used, 0, sizeof(used));
-    for (int i = 0; i &lt;= n; i++)
-    {
-        dist[i][0] = inf;
-        dist[i][1] = inf;
-    }
-    used[s][0] = 1;
-    dist[s][0] = 0;
-    dist[s][1] = 0;
-    used[s][1] = 1;
-    q.push(s);
-    q.push(0);
-    q.push(s);
-    q.push(1);
-    while (!q.empty())
-    {
-        int u = q.front();
-        q.pop();
-        int ut = q.front();
-        q.pop();
-        for (int i = head[u]; i != -1; i = e[i].next)
-        {
-            int v = e[i].v;
-            int vt = e[i].c;
-            if (dist[v][vt] &gt; dist[u][ut] + getv(ut, vt))
-            {
-                dist[v][vt] = dist[u][ut] + getv(ut, vt);
-                if (!used[v][vt])
-                {
-                    q.push(v);
-                    q.push(vt);
-                    used[v][vt] = 1;
-                }
-            }
-
-        }
-    }
-    return min(dist[t][0],dist[t][1]);
-}
-int main()
-{
-    //freopen("data.in", "r", stdin);
-    memset(head, -1, sizeof(head));
-    en = 0;
-    int n, m;
-    cin &gt;&gt; n &gt;&gt; m;
-    for (int i = 0; i &lt; m; i++)
-    {
-        int x, y;
-        cin &gt;&gt; x &gt;&gt; y;
-        addedge(x, y, 0);
-        addedge(y, x, 1);
-    }
-    int s, t;
-    cin &gt;&gt; s &gt;&gt; t;
-    cout &lt;&lt; spfa(s, t, n) &lt;&lt; endl;
-
-}</pre>
+        
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2013/09/06/ural-1930/" data-id="cio53mhup000fk8wyybh4y7y8" class="article-share-link" data-share="baidu" data-title="ural 1930">分享到</a>
+        <a data-url="http://yoursite.com/2016/05/12/git使用手册/" data-id="cio53mhvb000qk8wygtcqnts3" class="article-share-link" data-share="baidu" data-title="git使用手册">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2013/09/06/ural-1930/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2016/05/12/git使用手册/#ds-thread" class="article-comment-link">評論</a>
       
 
       
@@ -224,19 +111,10 @@ int main()
     
 <nav id="article-nav">
   
-    <a href="/2013/09/06/ural-1208/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">
-        
-          ural 1208
-        
-      </div>
-    </a>
   
-  
-    <a href="/2013/09/05/ural-1210/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/12/数据结构-hash表/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">ural 1210</div>
+      <div class="article-nav-title">数据结构-hash表</div>
     </a>
   
 </nav>
@@ -246,7 +124,7 @@ int main()
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2013/09/06/ural-1930/" data-title="ural 1930" data-url="http://yoursite.com/2013/09/06/ural-1930/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/05/12/git使用手册/" data-title="git使用手册" data-url="http://yoursite.com/2016/05/12/git使用手册/"></div>
   </section>
 </section>
       

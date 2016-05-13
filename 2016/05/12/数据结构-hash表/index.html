@@ -4,18 +4,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>coding技巧集锦 | Learning4Fun</title>
+  <title>数据结构-hash表 | Learning4Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="调用堆栈调用堆栈最经常被用于存放子程序的返回地址。在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址。因此，如果被调用的子程序还要调用其他的子程序，其自身的返回地址就必须存入调用堆栈，在其自身运行完毕后再行取回。在递归程序中，每一层次递归都必须在调用堆栈上增加一条地址，因此如果程序出现无限递归（或仅仅是过多的递归层次），调用堆栈就会产生堆栈溢出。调用堆栈的主要功能是存放返回地址。">
+  <meta name="description" content="Learning，Coding，Recording">
 <meta property="og:type" content="article">
-<meta property="og:title" content="coding技巧集锦">
-<meta property="og:url" content="http://yoursite.com/2016/04/25/coding技巧集锦/index.html">
+<meta property="og:title" content="数据结构-hash表">
+<meta property="og:url" content="http://yoursite.com/2016/05/12/数据结构-hash表/index.html">
 <meta property="og:site_name" content="Learning4Fun">
-<meta property="og:description" content="调用堆栈调用堆栈最经常被用于存放子程序的返回地址。在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址。因此，如果被调用的子程序还要调用其他的子程序，其自身的返回地址就必须存入调用堆栈，在其自身运行完毕后再行取回。在递归程序中，每一层次递归都必须在调用堆栈上增加一条地址，因此如果程序出现无限递归（或仅仅是过多的递归层次），调用堆栈就会产生堆栈溢出。调用堆栈的主要功能是存放返回地址。">
-<meta property="og:updated_time" content="2016-04-25T05:32:44.332Z">
+<meta property="og:description" content="Learning，Coding，Recording">
+<meta property="og:updated_time" content="2016-05-12T11:30:29.845Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="coding技巧集锦">
-<meta name="twitter:description" content="调用堆栈调用堆栈最经常被用于存放子程序的返回地址。在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址。因此，如果被调用的子程序还要调用其他的子程序，其自身的返回地址就必须存入调用堆栈，在其自身运行完毕后再行取回。在递归程序中，每一层次递归都必须在调用堆栈上增加一条地址，因此如果程序出现无限递归（或仅仅是过多的递归层次），调用堆栈就会产生堆栈溢出。调用堆栈的主要功能是存放返回地址。">
+<meta name="twitter:title" content="数据结构-hash表">
+<meta name="twitter:description" content="Learning，Coding，Recording">
   
     <link rel="alternative" href="/atom.xml" title="Learning4Fun" type="application/atom+xml">
   
@@ -70,10 +70,10 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-coding技巧集锦" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-数据结构-hash表" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/04/25/coding技巧集锦/" class="article-date">
-  <time datetime="2016-04-25T04:50:05.000Z" itemprop="datePublished">2016-04-25</time>
+    <a href="/2016/05/12/数据结构-hash表/" class="article-date">
+  <time datetime="2016-05-12T11:30:29.000Z" itemprop="datePublished">2016-05-12</time>
 </a>
     
   </div>
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      coding技巧集锦
+      数据结构-hash表
     </h1>
   
 
@@ -92,25 +92,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="调用堆栈">调用堆栈</h2><p>调用堆栈最经常被用于存放子程序的返回地址。在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址。因此，如果被调用的子程序还要调用其他的子程序，其自身的返回地址就必须存入调用堆栈，在其自身运行完毕后再行取回。在递归程序中，每一层次递归都必须在调用堆栈上增加一条地址，因此如果程序出现无限递归（或仅仅是过多的递归层次），调用堆栈就会产生堆栈溢出。<br>调用堆栈的主要功能是存放返回地址。除此之外，调用堆栈还用于存放：<br>本地变量：子程序的变量可以存入调用堆栈，这样可以达到不同子程序间变量分离开的作用。<br>参数传递：如果寄存器不足以容纳子程序的参数，可以在调用堆栈上存入参数。<br>环境传递：有些语言（如Pascal与Ada）支持“多层子程序”，即子程序中可以利用主程序的本地变量。这些变量可以通过调用堆栈传入子程序。</p>
-<h2 id="堆与栈">堆与栈</h2><h3 id="C/C++的堆栈">C/C++的堆栈</h3><p>一个由C/C++编译的程序占用的内存分为以下几个部分：</p>
-<ol>
-<li>栈区（stack）— 由编译器自动分配释放 ，存放函数的参数名，局部变量的名等。其操作方式类似于数据结构中的栈。</li>
-<li>堆区（heap）— 由程序员分配释放， 若程序员不释放，程序结束时可能由OS回收。注意它与数据结构中的堆是两回事，分配方式倒是类似于链表。</li>
-<li>静态区（static）—全局变量和局部静态变量的存储是放在一块的。程序结束后由系统释放。</li>
-<li>文字常量区—常量字符串就是放在这里的，程序结束后由系统释放 。</li>
-<li>程序代码区— 存放函数体的二进制代码。</li>
-</ol>
-<h3 id="java中的堆栈">java中的堆栈</h3>
+        
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2016/04/25/coding技巧集锦/" data-id="cinzje82v000pt0wyl4u9y7x2" class="article-share-link" data-share="baidu" data-title="coding技巧集锦">分享到</a>
+        <a data-url="http://yoursite.com/2016/05/12/数据结构-hash表/" data-id="cio53mhu90007k8wyg6wleiyw" class="article-share-link" data-share="baidu" data-title="数据结构-hash表">分享到</a>
       
 
       
-        <a href="http://yoursite.com/2016/04/25/coding技巧集锦/#ds-thread" class="article-comment-link">評論</a>
+        <a href="http://yoursite.com/2016/05/12/数据结构-hash表/#ds-thread" class="article-comment-link">評論</a>
       
 
       
@@ -120,19 +111,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/04/26/c++基础-类与继承/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/05/12/git使用手册/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">
         
-          c++基础-类与继承
+          git使用手册
         
       </div>
     </a>
   
   
-    <a href="/2016/04/25/手写程序集锦/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/12/c++基础-异常处理/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">手写程序集锦</div>
+      <div class="article-nav-title">c++基础-异常处理</div>
     </a>
   
 </nav>
@@ -142,7 +133,7 @@
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2016/04/25/coding技巧集锦/" data-title="coding技巧集锦" data-url="http://yoursite.com/2016/04/25/coding技巧集锦/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/05/12/数据结构-hash表/" data-title="数据结构-hash表" data-url="http://yoursite.com/2016/05/12/数据结构-hash表/"></div>
   </section>
 </section>
       
@@ -154,7 +145,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標簽</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程语言/">编程语言</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进程/">进程</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程语言/">编程语言</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进程/">进程</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -172,7 +163,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">歸檔</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -184,23 +175,23 @@
       <ul>
         
           <li>
+            <a href="/2016/05/12/git使用手册/">git使用手册</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/12/数据结构-hash表/">数据结构-hash表</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/12/c++基础-异常处理/">c++基础-异常处理</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/12/c++基础-零散知识点总结/">c++基础：零散知识点总结</a>
+          </li>
+        
+          <li>
             <a href="/2016/04/26/c++基础-类与继承/">c++基础-类与继承</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/25/coding技巧集锦/">coding技巧集锦</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/25/手写程序集锦/">手写程序集锦</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/25/操作系统基础-进程/">操作系统基础-进程</a>
-          </li>
-        
-          <li>
-            <a href="/2016/04/23/c++基础-关键字与限定符/">c++基础：关键字与限定符</a>
           </li>
         
       </ul>
